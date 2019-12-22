@@ -6,7 +6,7 @@ The sum of these multiples is 23.
 Find the sum of all the multiples of 3 or 5 below 1000.
 */
 
-package example
+package problems
 
 object ProblemOne extends App {
   println("Test")
