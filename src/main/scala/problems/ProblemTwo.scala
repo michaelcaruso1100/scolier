@@ -10,16 +10,23 @@
 */
 
 package problems
+import annotation.tailrec
 
 object ProblemTwo extends App {
   def isEven(n : Int) : Boolean =
       n % 2 ==0 
 
-  
-  def getFibs(lim : Int) : List(Int) ={
-        
-
-
-     }
-
+  def getFib(n :Int) : Int = {
+    
+    @tailrec
+    def loop(a : Int, b : Int, temp : Int = 0) : Int = {
+      if (temp < n)
+        loop(b,a+b,temp +1)
+      else
+        a
+    }
+    loop(0,1)
+  }
+  println(getFib(6))
+  //TODO - Create wrapping function that returns list of fibs
 }
